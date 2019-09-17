@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:id="@+id/motionTextAlign"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layoutDescription="@xml/scene_text_align"
+        app:showPaths="false">
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:id="@+id/backgroundView"/>
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:id="@+id/alignLeftBtn"
+            android:tint="@color/colorBlack"
+            android:src="@drawable/ic_align_left"/>
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:id="@+id/alignCenterBtn"
+            android:tint="@color/colorBlack"
+            android:src="@drawable/ic_align_center"/>
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:id="@+id/alignRightBtn"
+            android:tint="@color/colorBlack"
+            android:src="@drawable/ic_align_right"/>
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:id="@+id/alignFullBtn"
+            android:tint="@color/colorBlack"
+            android:src="@drawable/ic_align_full"/>
+
+
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+</layout>

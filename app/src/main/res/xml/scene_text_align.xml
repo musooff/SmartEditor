@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Transition app:constraintSetStart="@id/leftSelected"
+        app:constraintSetEnd="@id/centerSelected"
+        app:duration="3000">
+        <OnSwipe app:dragDirection="dragRight"
+            app:touchAnchorId="@id/backgroundView"/>
+    </Transition>
+    <Transition app:constraintSetStart="@id/centerSelected"
+        app:constraintSetEnd="@id/rightSelected"
+        app:duration="3000">
+        <OnSwipe app:dragDirection="dragRight"
+            app:touchAnchorId="@id/backgroundView"/>
+    </Transition>
+
+    <Transition app:constraintSetStart="@id/rightSelected"
+        app:constraintSetEnd="@id/fullSelected"
+        app:duration="3000">
+        <OnSwipe app:dragDirection="dragRight"
+            app:touchAnchorId="@id/backgroundView"/>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/leftSelected">
+        <Constraint android:id="@id/backgroundView"
+            android:layout_height="100dp"
+            android:layout_width="100dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="@id/alignLeftBtn"/>
+        <Constraint android:id="@id/alignLeftBtn"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/alignCenterBtn"/>
+
+        <Constraint android:id="@id/alignCenterBtn"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/alignRightBtn"
+            app:layout_constraintStart_toEndOf="@id/alignLeftBtn"/>
+        <Constraint android:id="@id/alignRightBtn"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/alignCenterBtn"
+            app:layout_constraintEnd_toStartOf="@id/alignFullBtn"/>
+        <Constraint android:id="@id/alignFullBtn"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/alignRightBtn"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    </ConstraintSet>
+    <ConstraintSet android:id="@+id/centerSelected">
+        <Constraint android:id="@id/backgroundView"
+            android:layout_height="100dp"
+            android:layout_width="100dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="@id/alignCenterBtn"/>
+        <Constraint android:id="@id/alignLeftBtn"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/alignCenterBtn"/>
+
+        <Constraint android:id="@id/alignCenterBtn"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/alignRightBtn"
+            app:layout_constraintStart_toEndOf="@id/alignLeftBtn"/>
+        <Constraint android:id="@id/alignRightBtn"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/alignCenterBtn"
+            app:layout_constraintEnd_toStartOf="@id/alignFullBtn"/>
+        <Constraint android:id="@id/alignFullBtn"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/alignRightBtn"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    </ConstraintSet>
+    <ConstraintSet android:id="@+id/rightSelected">
+        <Constraint android:id="@id/backgroundView"
+            android:layout_height="100dp"
+            android:layout_width="100dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="@id/alignRightBtn"/>
+        <Constraint android:id="@id/alignLeftBtn"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/alignCenterBtn"/>
+
+        <Constraint android:id="@id/alignCenterBtn"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/alignRightBtn"
+            app:layout_constraintStart_toEndOf="@id/alignLeftBtn"/>
+        <Constraint android:id="@id/alignRightBtn"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/alignCenterBtn"
+            app:layout_constraintEnd_toStartOf="@id/alignFullBtn"/>
+        <Constraint android:id="@id/alignFullBtn"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/alignRightBtn"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/fullSelected">
+        <Constraint android:id="@id/backgroundView"
+            android:layout_height="100dp"
+            android:layout_width="100dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="@id/alignFullBtn"/>
+        <Constraint android:id="@id/alignLeftBtn"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/alignCenterBtn"/>
+
+        <Constraint android:id="@id/alignCenterBtn"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/alignRightBtn"
+            app:layout_constraintStart_toEndOf="@id/alignLeftBtn"/>
+        <Constraint android:id="@id/alignRightBtn"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/alignCenterBtn"
+            app:layout_constraintEnd_toStartOf="@id/alignFullBtn"/>
+        <Constraint android:id="@id/alignFullBtn"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/alignRightBtn"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    </ConstraintSet>
+
+</MotionScene>
