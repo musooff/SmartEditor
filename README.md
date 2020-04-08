@@ -1,4 +1,4 @@
-## Design & Animatin
+## Design & Animation
 ## Bottom Buttons
 
 | Before   |    After      |
